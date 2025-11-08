@@ -38,3 +38,39 @@ Print out blinking string
 void printMulti(std::string string, mode mode[], int size, Color FG, Color BG)
 ```
 This function uses ```ANSI::mode mode[]``` to store all the params in readible way. If you want to change font or background color you have to specify them, but in other case they have default values.
+
+### ANSI::Color enum
+```cpp
+enum class Color{
+    black,
+    red,
+    green,
+    yellow,
+    blue,
+    purple,
+    cyan,
+    gray,
+    lblack,
+    lred,
+    lgreen,
+    lyellow,
+    lblue,
+    lpurple,
+    lcyan,
+    lgray
+    }
+```
+### ANSI::mode enum
+```cpp
+enum class mode{
+    reset,
+    bold,
+    faint,
+    italic,
+    underline,
+    blink,
+    rapidBlink,
+    BGColor,
+    FontColor
+}
+```
