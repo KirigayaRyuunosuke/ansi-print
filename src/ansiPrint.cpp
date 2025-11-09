@@ -88,10 +88,10 @@ namespace  ANSI{
                 //     std::cout << "";
                 //     break;
                 case mode::BGColor:
-                    std::cout << "38;5;" << static_cast<int>(BG);
+                    std::cout << "48;5;" << static_cast<int>(BG);
                     break;
                 case mode::FontColor:
-                    std::cout << "48;5;"<< static_cast<int>(FG);;
+                    std::cout << "38;5;"<< static_cast<int>(FG);;
                     break;
             }
             if(i < size - 1)
@@ -105,5 +105,25 @@ namespace  ANSI{
     void printMultiln(std::string string, mode mode[], int size, Color FG, Color BG){
         printMulti(string, mode, size, FG, BG);
         std::cout << '\n';
+    }
+
+    void printWarn(std::string string){
+        mode mode[2]{
+            mode::bold,
+            mode::FontColor
+        };
+        Color FontColor = Color::yellow;
+        printMulti("[Warn] ", mode, 2, FontColor);
+        std::cout << string << '\n';
+    }
+
+    void printErr(std::string string){
+        mode mode[2]{
+            mode::bold,
+            mode::FontColor
+        };
+        Color FontColor = Color::red;
+        printMulti("[Err] ", mode, 2, FontColor);
+        std::cout << string << '\n';
     }
 };

@@ -10,5 +10,6 @@ int main(){
     //ANSI::println("test",params,size);
     // ANSI::printColorln("test", ANSI::Color::blue);
     ANSI::printMultiln("test", params, 3);
+    ANSI::printErr("DUPA");
     return 0;
 }

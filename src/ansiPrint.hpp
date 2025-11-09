@@ -5,8 +5,8 @@
 namespace ANSI{
     void reset();
 
-    void print(std::string);
-    void println(std::string);
+    void print(std::string = "");
+    void println(std::string = "");
 
     void print(std::string, int [], int);
     void println(std::string, int [], int);
@@ -51,5 +51,8 @@ namespace ANSI{
 
     void printMulti(std::string, mode[], int, Color = Color::lgray, Color = Color::black);
     void printMultiln(std::string, mode[], int, Color = Color::lgray, Color = Color::black);
+
+    void printWarn(std::string);
+    void printErr(std::string);
 
 }
