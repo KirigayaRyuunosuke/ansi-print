@@ -55,7 +55,7 @@ This function uses ```ANSI::mode mode[]``` to store all the params in readible w
 void printWarn(std::string);
 void printErr(std::string);
 ```
-These two are wrapper for other function allowing for faster programing of errors and warning.
+These two are wrappers for other function allowing for faster warnings and errors printing.
 
 ### ANSI::Color enum
 ```cpp
