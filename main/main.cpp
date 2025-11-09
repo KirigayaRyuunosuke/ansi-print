@@ -1,4 +1,4 @@
-#include "src/ansiPrint.hpp"
+#include "../src/ansiPrint.hpp"
 
 int main(){
     return 0;

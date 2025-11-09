@@ -1,4 +1,4 @@
-#include "src/ansiPrint.hpp"
+#include "../src/ansiPrint.hpp"
 
 int main(){
     ANSI::printColorln("Example program", ANSI::Color::lyellow);
