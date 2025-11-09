@@ -3,6 +3,17 @@ Simple repo for easier ANSI escape codes operations
 
 ## USAGE
 
+### example
+I created example.cpp file which contains most usefull functions and is made purely using ansi-print functions.
+For easier compilation I also prepared script
+```bash
+./example.sh
+```
+Remember to use
+```bash
+chmod +x example.sh
+```
+
 ### reset()
 Resets all paramethers
 
@@ -38,6 +49,13 @@ Print out blinking string
 void printMulti(std::string string, mode mode[], int size, Color FG, Color BG)
 ```
 This function uses ```ANSI::mode mode[]``` to store all the params in readible way. If you want to change font or background color you have to specify them, but in other case they have default values.
+
+### printErr & printWarn
+```cpp
+void printWarn(std::string);
+void printErr(std::string);
+```
+These two are wrapper for other function allowing for faster programing of errors and warning.
 
 ### ANSI::Color enum
 ```cpp
